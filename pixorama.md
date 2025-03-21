@@ -8,7 +8,7 @@ For custom node "was-node-suite-comfyui" I am trying to setup "webui_styles" par
 
     {
         "run_requirements": true,
-        "suppress_uncomfy_warnings": true,
+        "suppress_uncomfy_warnings": true,  
         "show_startup_junk": true,
         "show_inspiration_quote": true,
         "text_nodes_type": "STRING",
@@ -57,8 +57,18 @@ https://huggingface.co/city96/FLUX.1-dev-gguf/blob/main/flux1-dev-Q8_0.gguf
 
 copy in : ../user_data/comfyui/models/unet
 
-pb 
+Get clip_l.safetensors from here
+https://huggingface.co/comfyanonymous/flux_text_encoders/tree/main
+Place it in the clip folder ..ComfyUI\models\clip
 
-![restart required](image.png)
+Get one of the T5 encoders (recommended to use Q5_K_M or larger for the best results)
+https://huggingface.co/city96/t5-v1_1-xxl-encoder-gguf/tree/main
+Place it in the clip folder ..ComfyUI\models\clip
 
-![Workspaces files](image-1.png)
+Get the ae.safetensor vae from here
+https://huggingface.co/black-forest-labs/FLUX.1-schnell/blob/main/ae.safetensors
+Place it in the vae folder ..ComfyUI\models\vae
+
+## ThinkDiffusion Competitors 
+
+https://comfy.icu/
