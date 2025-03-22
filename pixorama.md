@@ -72,3 +72,26 @@ Place it in the vae folder ..ComfyUI\models\vae
 ## ThinkDiffusion Competitors 
 
 https://comfy.icu/
+
+[custome Nodes](https://comfy.icu/node/)
+
+## [Ep11 - LLM, Prompt Generation, img2txt, txt2txt Overview](https://www.youtube.com/watch?v=yutYU97Bj7E)
+
+### Florence 
+Install Florence
+![Select version](image-2.png)
+
+I use the latest
+
+DownloadAndLoadFlorence2Model -> automatic in ../user_data/comfyui/models/LLM/Florence-2-base
+
+### Searge
+
+Instal custom nodes : Searge-LLM for ComfyUI v1.0
+
+create directory : models/llm_gguf
+
+place Mistral-7B-Instruct-v0.3.Q4_K_M.gguf in the ComfyUI/models/llm_gguf directory.
+
+https://huggingface.co/MaziyarPanahi/Mistral-7B-Instruct-v0.3-GGUF/tree/main
+Recommended : https://huggingface.co/MaziyarPanahi/Mistral-7B-Instruct-v0.3-GGUF/resolve/main/Mistral-7B-Instruct-v0.3.Q4_K_M.gguf
