@@ -95,3 +95,41 @@ place Mistral-7B-Instruct-v0.3.Q4_K_M.gguf in the ComfyUI/models/llm_gguf direct
 
 https://huggingface.co/MaziyarPanahi/Mistral-7B-Instruct-v0.3-GGUF/tree/main
 Recommended : https://huggingface.co/MaziyarPanahi/Mistral-7B-Instruct-v0.3-GGUF/resolve/main/Mistral-7B-Instruct-v0.3.Q4_K_M.gguf
+
+## [Ep12 - How to Upscale Your AI Images](https://www.youtube.com/watch?v=i8v9RbNy4Zw)
+
+Go to manger, model manager / sort by type Upscale : 
+- 4x_NMKD-Siax_200k
+- 4x-AnimeSharp
+- 4x_foolhardy_Remacri
+
+Refresh ComfyUI
+
+Install this custom nodes :
+- ControlAltAI Nodes
+- ComfyUI-PixelResolutionCalculator
+- ComfyUI Easy Use
+- rgthree's ComfyUI Nodes
+
+Restart ComfyUI
+
+## [Ep13 - Exploring Ollama, LLaVA, Gemma Models](https://www.youtube.com/watch?v=eK6MXm7q37c)
+
+Link pixorama workflows : https://discord.com/channels/1245221993746399232/1323521185132183694
+
+
+[Ollama search](https://ollama.com/search)
+
+![llava](image-5.png)
+
+Install these custom nodes if you don't have it
+
+- ComfyUI Ollama created by stavsap
+- ComfyUI Easy Use
+
+## [Ep14 - How to Use Flux ControlNet Union Pro](https://www.youtube.com/watch?v=WHuhxKk40k4)
+
+https://discord.com/channels/1245221993746399232/1323578980581904488
+
+[model diffusion_pytorch_model.safetensors](https://huggingface.co/Shakker-Labs/FLUX.1-dev-ControlNet-Union-Pro/tree/main)
+
