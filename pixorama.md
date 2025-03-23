@@ -122,7 +122,7 @@ Link pixorama workflows : https://discord.com/channels/1245221993746399232/13235
 
 ![llava](image-5.png)
 
-Install these custom nodes if you don't have it
+Install these custom nodes :
 
 - ComfyUI Ollama created by stavsap
 - ComfyUI Easy Use
@@ -131,5 +131,38 @@ Install these custom nodes if you don't have it
 
 https://discord.com/channels/1245221993746399232/1323578980581904488
 
+### New model
+
 [model diffusion_pytorch_model.safetensors](https://huggingface.co/Shakker-Labs/FLUX.1-dev-ControlNet-Union-Pro/tree/main)
 
+
+How to change name inside of models inside controlnet ? 
+
+![2 controlnet model](image-6.png)
+
+### Custom nodes
+
+
+ComfyUI's ControlNet Auxiliary Preprocessors
+
+
+![personal Workspace files](image-7.png)
+
+conflict with : 
+
+![Comyui-art-venture in restart status](image-8.png)
+
+
+Uninstall ComfyUI's ControlNet Auxiliary Preprocessors
+
+### Allocation on device
+
+![allocation](image-9.png)
+
+
+## [Ep15 - Styles Update, Prompts](https://www.youtube.com/watch?v=KMlUakdbdnc)
+https://discord.com/channels/1245221993746399232/1323585163896033380
+
+### Custom nodes
+
+ComfyUI-iTools
