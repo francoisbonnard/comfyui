@@ -155,10 +155,18 @@ conflict with :
 
 Uninstall ComfyUI's ControlNet Auxiliary Preprocessors
 
+ThinkDiff Team Advice
+
+![Advice from Clem](image-10.png)
+
+https://huggingface.co/Shakker-Labs/FLUX.1-dev-ControlNet-Union-Pro
+https://huggingface.co/Shakker-Labs/FLUX.1-dev-ControlNet-Union-Pro/resolve/main/diffusion_pytorch_model.safetensors
+
 ### Allocation on device
 
 ![allocation](image-9.png)
 
+### Not working with BAE
 
 ## [Ep15 - Styles Update, Prompts](https://www.youtube.com/watch?v=KMlUakdbdnc)
 https://discord.com/channels/1245221993746399232/1323585163896033380
@@ -166,3 +174,44 @@ https://discord.com/channels/1245221993746399232/1323585163896033380
 ### Custom nodes
 
 ComfyUI-iTools
+
+ ## [Ep17 Flux LoRA ](https://www.youtube.com/watch?v=-aW1U8QEak0&t=234s)
+
+Download flux-ghibsky-illustration lora
+https://huggingface.co/aleksa-codes/flux-ghibsky-illustration/tree/main
+Place it in the loras folder ..ComfyUI\models\loras
+Trigger Word: GHIBSKY
+
+Download 70s SciFi Style
+https://civitai.com/models/824478/70s-scifi-style-by-chronoknight-flux
+Place it in the loras folder ..ComfyUI\models\loras
+Trigger Word: ck-70scf
+
+Download Flux Fantasy Lora
+https://www.shakker.ai/modelinfo/3cf25bb29e0144e4849064b122150054/Flux-Fantasy-Hide?from=models
+Place it in the loras folder ..ComfyUI\models\loras
+Trigger Word: fantasy
+Recommended weight 0.8
+
+Download Sketchy Pastel Anime Flux Lora
+https://www.shakker.ai/modelinfo/33815c53e3024899bde957fa012e1f43/TQ-Sketchy-Pastel-Anime-Flux?from=models
+Place it in the loras folder ..ComfyUI\models\loras
+Trigger Word: anime
+Recommended weight 0.8
+
+Download Flux_Sticker_Lora
+https://huggingface.co/diabolic6045/Flux_Sticker_Lora
+Place it in the loras folder ..ComfyUI\models\loras
+Trigger Word: 5t1cker 5ty1e
+
+Download UltraRealistic Lora
+https://civitai.com/models/796382?modelVersionId=940466
+Place it in the loras folder ..ComfyUI\models\loras
+Trigger Words: amateurish photo
+Guidance =2.5 Steps=40
+
+Download diffusion_pytorch_model.safetensors
+https://huggingface.co/alimama-creative/FLUX.1-Turbo-Alpha/tree/main
+rename it to FLUX.1-Turbo-Alpha or any other name you want
+Place it in the loras folder ..ComfyUI\models\loras
+guidance_scale=3.5 and lora_scale=1 steps=8
