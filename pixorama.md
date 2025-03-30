@@ -1,3 +1,30 @@
+- [Ep07 - Working With Text - Art Styles Update](#ep07---working-with-text---art-styles-update)
+- [Ep09 - How to Use SDXL ControlNet Union](#ep09---how-to-use-sdxl-controlnet-union)
+- [Ep10 - Flux GGUF and Custom Nodes](#ep10---flux-gguf-and-custom-nodes)
+- [ThinkDiffusion Competitors](#thinkdiffusion-competitors)
+- [Ep11 - LLM, Prompt Generation, img2txt, txt2txt Overview](#ep11---llm-prompt-generation-img2txt-txt2txt-overview)
+  - [Florence](#florence)
+  - [Searge](#searge)
+- [Ep12 - How to Upscale Your AI Images](#ep12---how-to-upscale-your-ai-images)
+- [Ep13 - Exploring Ollama, LLaVA, Gemma Models](#ep13---exploring-ollama-llava-gemma-models)
+- [Ep14 - How to Use Flux ControlNet Union Pro](#ep14---how-to-use-flux-controlnet-union-pro)
+  - [New model](#new-model)
+  - [Custom nodes](#custom-nodes)
+  - [Allocation on device](#allocation-on-device)
+  - [Not working with BAE](#not-working-with-bae)
+- [Ep15 - Styles Update, Prompts](#ep15---styles-update-prompts)
+  - [Custom nodes](#custom-nodes-1)
+- [Ep17 Flux LoRA ](#ep17-flux-lora-)
+  - [Some Lora](#some-lora)
+  - [from civitai](#from-civitai)
+  - [Custom Nodes](#custom-nodes-2)
+- [Flux LoRA Training with Kohya in 2025](#flux-lora-training-with-kohya-in-2025)
+  - [Version Kohya v24.1.7 (sep 6,2024)](#version-kohya-v2417-sep-62024)
+  - [Uploading images](#uploading-images)
+  - [Blip Captioning](#blip-captioning)
+  - [Dataset preparation](#dataset-preparation)
+
+
 ## Ep07 - Working With Text - Art Styles Update
 
 For custom node "was-node-suite-comfyui" I am trying to setup "webui_styles" parameter in the "was_suite_config.json" file to fit my "mystyles.csv", but this doesn't work : "webui_styles": "/home/ubuntu/ComfyUI/custom_nodes/was-node-suite-comfyui/mystyles.csv"
@@ -177,6 +204,8 @@ ComfyUI-iTools
 
  ## [Ep17 Flux LoRA ](https://www.youtube.com/watch?v=-aW1U8QEak0&t=234s)
 
+### Some Lora
+
 Download flux-ghibsky-illustration lora
 https://huggingface.co/aleksa-codes/flux-ghibsky-illustration/tree/main
 Place it in the loras folder ..ComfyUI\models\loras
@@ -215,3 +244,67 @@ https://huggingface.co/alimama-creative/FLUX.1-Turbo-Alpha/tree/main
 rename it to FLUX.1-Turbo-Alpha or any other name you want
 Place it in the loras folder ..ComfyUI\models\loras
 guidance_scale=3.5 and lora_scale=1 steps=8
+
+### from civitai
+Trigger Words: made out of clouds
+Guidance =2.5 Steps=40
+
+STRENGTH: 1
+https://civitai.com/models/749668/flux-cloudstyle
+
+
+### Custom Nodes
+
+![NO NEED OF ComfyUI-Manager](image-11.png)
+
+## [Flux LoRA Training with Kohya in 2025](https://learn.thinkdiffusion.com/flux-lora-training-with-kohya/)
+
+### Version Kohya v24.1.7 (sep 6,2024)
+![Relesea to use](image-12.png)
+
+### Uploading images
+
+/home/ubuntu/user_data/kohya/image/Trump
+
+![Jpb & txt files](image-13.png)
+
+### Blip Captioning
+
+(done for trump)
+
+### Dataset preparation
+
+Go to Lora / Training / Dataset preparation
+
+![Lora - Training](image-14.png)
+
+![below](image-15.png)
+
+1. Dreambooth/LoRA Folder preparation enter :
+   - the Instance prompt : trumpuni
+   - Class prompt : 
+2. Set required paths
+   - Training Images: /home/ubuntu/user_data/kohya/image/trump
+   - Destination directory : /home/ubuntu/user_data/kohya/output/trump
+   - ![output folder](image-16.png)
+3. Set the number of repeats : 20   
+4. Click on Prepare training data 
+5. Click on Copy info to respective fields.
+    - new folder in output/img ![new folder in output/img](image-17.png)
+6. Upload config file
+    - ![alt text](image-18.png)
+    - /home/ubuntu/user_data/kohya/configs/kohya48gbvram.json
+7. Configuration tab
+   - ![alt text](image-19.png)
+   - ![1 & 2](image-20.png)
+8. Start training
+   - ![alt text](image-21.png)
+9. Check progress
+    - /home/ubuntu/user_data/kohya/logs/francoisbonnard-clipskip-30090550-logs.txt
+10. Result
+    -  .safetensors files
+11. TensorBoard
+    - Start tensorboard ![alt text](image-22.png)
+    - Open tensorboard ![alt text](image-23.png)
+    - 11h39 ![alt text](image-24.png)
+    - ![alt text](image-27.png)
