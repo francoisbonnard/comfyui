@@ -17,6 +17,7 @@
 - [Ep17 Flux LoRA ](#ep17-flux-lora-)
   - [Some Lora](#some-lora)
   - [from civitai](#from-civitai)
+  - [flux Lora Character](#flux-lora-character)
   - [Custom Nodes](#custom-nodes-2)
 - [Flux LoRA Training with Kohya in 2025](#flux-lora-training-with-kohya-in-2025)
   - [Version Kohya v24.1.7 (sep 6,2024)](#version-kohya-v2417-sep-62024)
@@ -26,6 +27,11 @@
     - [Test 1](#test-1)
     - [Test 2](#test-2)
   - [Glossary \& concept for Kohya](#glossary--concept-for-kohya)
+  - [Kohya Bardella](#kohya-bardella)
+    - [start picture operation : 14h43](#start-picture-operation--14h43)
+    - [start config](#start-config)
+    - [start training : 15h43](#start-training--15h43)
+    - [2h49 temps alloué de calcul machine : 15:49](#2h49-temps-alloué-de-calcul-machine--1549)
 
 
 ## Ep07 - Working With Text - Art Styles Update
@@ -255,6 +261,10 @@ Guidance =2.5 Steps=40
 STRENGTH: 1
 https://civitai.com/models/749668/flux-cloudstyle
 
+### flux Lora Character
+
+https://civitai.com/models/724291/vladimir-putin
+
 
 ### Custom Nodes
 
@@ -274,6 +284,7 @@ https://civitai.com/models/749668/flux-cloudstyle
 ### Blip Captioning
 
 (done for trump)
+![Blip ](image-34.png)
 
 ### Dataset preparation
 
@@ -315,8 +326,8 @@ Go to Lora / Training / Dataset preparation
     - 11h39 ![alt text](image-24.png)
     - ![alt text](image-27.png)
     - Steps max 14000 ![alt text](image-25.png)
-    -![alt text](image-26.png)
-    -![alt text](image-28.png)
+![alt text](image-26.png)
+![alt text](image-28.png)
 
 #### Test 2
     - New test with this parameter :
@@ -325,7 +336,24 @@ Go to Lora / Training / Dataset preparation
         "save_every_n_epochs": 1,
     - Steps max 4200 ![alt text](image-30.png)
 
-    - TensorBoard in blue ![alt text](image-29.png)
+    - TensorBoard in blue 
+![alt text](image-29.png)
+
+    14% - 567/4200 : 13:28
+    16% -  651/4200 : 13:39
+
+![alt text](image-32.png)
+![alt text](image-31.png)
+
+420/4200 [52:35<7:53:17,  7.51s/it, avr_loss=0.375]2025-03-30 11:10:11 INFO     epoch is incremented. train_util.py:715 current_epoch: 2, epoch: 3  
+
+630/4200 [1:18:50<7:26:47,  7.51s/it, avr_loss=0.362]2025-03-30 11:36:26 INFO     epoch is incremented.             train_util.py:715  current_epoch: 3, epoch: 4             
+
+840/4200 [1:45:06<7:00:26,  7.51s/it, avr_loss=0.359]2025-03-30 12:02:42 INFO     epoch is incremented.             train_util.py:715  current_epoch: 4, epoch: 5
+
+ 1050/4200 [2:11:20<6:34:00,  7.50s/it, avr_loss=0.357]2025-03-30 12:28:56 INFO     epoch is incremented.             train_util.py:715   current_epoch: 5, epoch: 6 
+
+![alt text](image-33.png)
 
 ### Glossary & concept for Kohya
 
@@ -545,3 +573,24 @@ Go to Lora / Training / Dataset preparation
         "weighted_captions": false,
         "xformers": "sdpa"
 ```
+
+### Kohya Bardella
+
+#### start picture operation : 14h43
+end picture operation : 15h23
+
+#### start config 
+Prefix : Jordan bardella / Jordinou 
+
+![Jordinou prefix](image-35.png)
+
+Dreambooth/LoRA Folder preparation enter :
+
+- the Instance prompt : jordinou
+- Class prompt : male
+- Training Images: /home/ubuntu/user_data/kohya/image/jordinou
+- Destination directory : /home/ubuntu/user_data/kohya/output/jordinou
+
+#### start training : 15h43
+
+#### 2h49 temps alloué de calcul machine : 15:49
