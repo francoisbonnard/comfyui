@@ -594,3 +594,5 @@ Dreambooth/LoRA Folder preparation enter :
 #### start training : 15h43
 
 #### 2h49 temps alloué de calcul machine : 15:49
+
+[Question to Discord about Jordinou](https://discord.com/channels/1102237470457864282/1102259141839441960/1358363454922166324)
