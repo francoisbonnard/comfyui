@@ -32,6 +32,8 @@
     - [start config](#start-config)
     - [start training : 15h43](#start-training--15h43)
     - [2h49 temps alloué de calcul machine : 15:49](#2h49-temps-alloué-de-calcul-machine--1549)
+- [How to run Wan 2.1 in ComfyUI for ImagetoVideo Generation](#how-to-run-wan-21-in-comfyui-for-imagetovideo-generation)
+- [Tutoriels ComfyUI, épisode 49 : Maîtrisez txt2video, img2video et video2video avec Wan 2.1 VACE](#tutoriels-comfyui-épisode-49--maîtrisez-txt2video-img2video-et-video2video-avec-wan-21-vace)
 
 
 ## Ep07 - Working With Text - Art Styles Update
@@ -596,3 +598,28 @@ Dreambooth/LoRA Folder preparation enter :
 #### 2h49 temps alloué de calcul machine : 15:49
 
 [Question to Discord about Jordinou](https://discord.com/channels/1102237470457864282/1102259141839441960/1358363454922166324)
+
+## How to run Wan 2.1 in ComfyUI for ImagetoVideo Generation
+
+[Link](https://docs.thinkdiffusion.com/ai-art-video-models-and-apps/wan-2.1-in-the-cloud/how-to-run-wan-2.1-in-comfyui-for-imagetovideo-generation)
+
+  1 Alert
+  An outdated version(<1.16.9) of the `comfyui-frontend-package` is installed. It is not compatible with the current version of the Impact Pack.
+
+  ImagePadKJ
+The expanded size of the tensor (512) must match the existing size (2816) at non-singleton dimension 1. Target sizes: [512, 512, 3]. Tensor sizes: [3824, 2816, 3]
+
+Keywords: v0.3.38
+
+
+  2 Prompt outputs failed validation
+WanVideoModelLoader:
+- Value not in list: model: 'VACE-Wan2.1-1.3B-Preview.safetensors' not in ['Wan2.1-Fun-Control-14B_fp8_e4m3fn.safetensors', 'Wan2_1-I2V-14B-480P_fp8_e4m3fn.safetensors', 'Wan2_1-I2V-14B-720P_fp8_e4m3fn.safetensors', 'Wan_2.1_Fun_Control_1.3B.safetensors', 'flux1-canny-dev.safetensors', 'flux1-depth-dev.safetensors', 'flux1-dev-fp8.safetensors', 'flux1-dev.safetensors', 'flux1-fill-dev.safetensors', 'flux1-schnell-fp8.safetensors', 'flux1CannyDevFp8_v10.safetensors', 'flux1DepthDevFp8_v10.safetensors', 'hunyuan_video_I2V_fp8_e4m3fn.safetensors', 'hunyuan_video_v2_replace_image_to_video_720p_bf16.safetensors', 'wan2.1_i2v_720p_14B_fp16.safetensors', 'wan2.1_i2v_720p_14B_fp8_scaled.safetensors', 'wan2.1_t2v_1.3B_fp16.safetensors']
+LoadImage:
+- Custom validation failed for node: image - Invalid image file: FluxCN_00033_.png
+VHS_LoadVideo:
+- Custom validation failed for node: video - Invalid video file: CatOnPiano_25fps.mp4
+
+## Tutoriels ComfyUI, épisode 49 : Maîtrisez txt2video, img2video et video2video avec Wan 2.1 VACE
+
+[Link](https://www.youtube.com/watch?v=KGq96ag7FiY)
