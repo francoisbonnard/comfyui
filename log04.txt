@@ -1,0 +1,346 @@
+# ComfyUI Error Report
+## Error Details
+- **Node ID:** 172
+- **Node Type:** WanVideoSampler
+- **Exception Type:** RuntimeError
+- **Exception Message:** Given groups=1, weight of size [1536, 48, 1, 2, 2], expected input[1, 16, 22, 128, 72] to have 48 channels, but got 16 channels instead
+## Stack Trace
+```
+  File "/home/ubuntu/ComfyUI/execution.py", line 349, in execute
+    output_data, output_ui, has_subgraph = get_output_data(obj, input_data_all, execution_block_cb=execution_block_cb, pre_execute_cb=pre_execute_cb)
+                                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  File "/home/ubuntu/ComfyUI/execution.py", line 224, in get_output_data
+    return_values = _map_node_over_list(obj, input_data_all, obj.FUNCTION, allow_interrupt=True, execution_block_cb=execution_block_cb, pre_execute_cb=pre_execute_cb)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  File "/home/ubuntu/ComfyUI/execution.py", line 196, in _map_node_over_list
+    process_inputs(input_dict, i)
+
+  File "/home/ubuntu/ComfyUI/execution.py", line 185, in process_inputs
+    results.append(getattr(obj, func)(**inputs))
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  File "/home/ubuntu/ComfyUI/custom_nodes/ComfyUI-WanVideoWrapper/nodes.py", line 3289, in process
+    noise_pred, self.teacache_state = predict_with_cfg(
+                                      ^^^^^^^^^^^^^^^^^
+
+  File "/home/ubuntu/ComfyUI/custom_nodes/ComfyUI-WanVideoWrapper/nodes.py", line 2923, in predict_with_cfg
+    noise_pred_cond, teacache_state_cond = transformer(
+                                           ^^^^^^^^^^^^
+
+  File "/opt/tensorflow/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1751, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  File "/opt/tensorflow/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1762, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  File "/home/ubuntu/ComfyUI/custom_nodes/ComfyUI-WanVideoWrapper/wanvideo/modules/model.py", line 1220, in forward
+    self.original_patch_embedding(u.unsqueeze(0).to(torch.float32)).to(x[0].dtype)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  File "/opt/tensorflow/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1751, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  File "/opt/tensorflow/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1762, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  File "/opt/tensorflow/lib/python3.12/site-packages/torch/nn/modules/conv.py", line 725, in forward
+    return self._conv_forward(input, self.weight, self.bias)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  File "/opt/tensorflow/lib/python3.12/site-packages/torch/nn/modules/conv.py", line 720, in _conv_forward
+    return F.conv3d(
+           ^^^^^^^^^
+
+```
+## System Information
+- **ComfyUI Version:** 0.3.34
+- **Arguments:** main.py --listen --disable-xformers --highvram --port 7860 --output-directory /home/ubuntu/user_data/comfyui/outputs
+- **OS:** posix
+- **Python Version:** 3.12.6 (main, Oct 25 2024, 13:38:40) [GCC 11.4.0]
+- **Embedded Python:** false
+- **PyTorch Version:** 2.7.0+cu126
+## Devices
+
+- **Name:** cuda:0 NVIDIA L40S : cudaMallocAsync
+  - **Type:** cuda
+  - **VRAM Total:** 47576711168
+  - **VRAM Free:** 45990905496
+  - **Torch VRAM Total:** 1140850688
+  - **Torch VRAM Free:** 130057880
+
+## Logs
+```
+2025-06-01T09:15:05.397292 - Adding extra search path checkpoints /home/ubuntu/user_data/comfyui/models/checkpoints
+2025-06-01T09:15:05.397356 - Adding extra search path vae /home/ubuntu/user_data/comfyui/models/VAE
+2025-06-01T09:15:05.397388 - Adding extra search path loras /home/ubuntu/user_data/comfyui/models/Lora
+2025-06-01T09:15:05.397411 - Adding extra search path loras /home/ubuntu/user_data/comfyui/models/LyCORIS
+2025-06-01T09:15:05.397433 - Adding extra search path upscale_models /home/ubuntu/user_data/comfyui/models/ESRGAN
+2025-06-01T09:15:05.397453 - Adding extra search path upscale_models /home/ubuntu/user_data/comfyui/models/RealESRGAN
+2025-06-01T09:15:05.397470 - Adding extra search path upscale_models /home/ubuntu/user_data/comfyui/models/SwinIR
+2025-06-01T09:15:05.397488 - Adding extra search path embeddings /home/ubuntu/user_data/comfyui/models/embeddings
+2025-06-01T09:15:05.397505 - Adding extra search path hypernetworks /home/ubuntu/user_data/comfyui/models/hypernetworks
+2025-06-01T09:15:05.397522 - Adding extra search path controlnet /home/ubuntu/user_data/comfyui/models/ControlNet
+2025-06-01T09:15:05.397539 - Adding extra search path ipadapter /home/ubuntu/user_data/comfyui/models/ipadapter
+2025-06-01T09:15:05.397557 - Adding extra search path remgb /home/ubuntu/user_data/comfyui/pre_models/models/rembg
+2025-06-01T09:15:05.397574 - Adding extra search path unet /home/ubuntu/user_data/comfyui/models/unet
+2025-06-01T09:15:05.397595 - Adding extra search path checkpoints /home/ubuntu/user_data/comfyui/models/Stable-diffusion
+2025-06-01T09:15:05.397638 - Adding extra search path clip /home/ubuntu/user_data/comfyui/models/clip
+2025-06-01T09:15:05.397667 - Adding extra search path clip_vision /home/ubuntu/user_data/comfyui/models/clip_vision
+2025-06-01T09:15:05.397687 - Adding extra search path configs /home/ubuntu/user_data/comfyui/configs
+2025-06-01T09:15:05.397708 - Adding extra search path checkpoints /home/ubuntu/pre_models/models/checkpoints
+2025-06-01T09:15:05.397726 - Adding extra search path loras /home/ubuntu/pre_models/models/Lora
+2025-06-01T09:15:05.397742 - Adding extra search path controlnet /home/ubuntu/pre_models/models/ControlNet
+2025-06-01T09:15:05.397758 - Adding extra search path unet /home/ubuntu/pre_models/models/unet
+2025-06-01T09:15:05.397775 - Adding extra search path remgb /home/ubuntu/pre_models/models/rembg
+2025-06-01T09:15:05.397791 - Adding extra search path clip /home/ubuntu/pre_models/models/clip
+2025-06-01T09:15:05.397806 - Adding extra search path vae /home/ubuntu/pre_models/models/VAE
+2025-06-01T09:15:05.397822 - Adding extra search path ipadapter /home/ubuntu/pre_models/models/ipadapter
+2025-06-01T09:15:05.397838 - Adding extra search path clip_vision /home/ubuntu/pre_models/models/clip_vision
+2025-06-01T09:15:05.397856 - Adding extra search path custom_nodes /home/ubuntu/pre-custom_nodes
+2025-06-01T09:15:05.397879 - Setting output directory to: /home/ubuntu/user_data/comfyui/outputs
+2025-06-01T09:15:06.349863 - [START] Security scan2025-06-01T09:15:06.349876 - 
+2025-06-01T09:15:09.240049 - [DONE] Security scan2025-06-01T09:15:09.240065 - 
+2025-06-01T09:15:09.368916 - ## ComfyUI-Manager: installing dependencies done.2025-06-01T09:15:09.368961 - 
+2025-06-01T09:15:09.368990 - ** ComfyUI startup time:2025-06-01T09:15:09.369008 -  2025-06-01T09:15:09.369023 - 2025-06-01 09:15:09.3682025-06-01T09:15:09.369038 - 
+2025-06-01T09:15:09.369056 - ** Platform:2025-06-01T09:15:09.369070 -  2025-06-01T09:15:09.369083 - Linux2025-06-01T09:15:09.369096 - 
+2025-06-01T09:15:09.369109 - ** Python version:2025-06-01T09:15:09.369120 -  2025-06-01T09:15:09.369133 - 3.12.6 (main, Oct 25 2024, 13:38:40) [GCC 11.4.0]2025-06-01T09:15:09.369149 - 
+2025-06-01T09:15:09.369171 - ** Python executable:2025-06-01T09:15:09.369185 -  2025-06-01T09:15:09.369197 - /opt/tensorflow/bin/python32025-06-01T09:15:09.369208 - 
+2025-06-01T09:15:09.369221 - ** ComfyUI Path:2025-06-01T09:15:09.369232 -  2025-06-01T09:15:09.369242 - /home/ubuntu/ComfyUI2025-06-01T09:15:09.369252 - 
+2025-06-01T09:15:09.369264 - ** ComfyUI Base Folder Path:2025-06-01T09:15:09.369275 -  2025-06-01T09:15:09.369285 - /home/ubuntu/ComfyUI2025-06-01T09:15:09.369295 - 
+2025-06-01T09:15:09.369307 - ** User directory:2025-06-01T09:15:09.369317 -  2025-06-01T09:15:09.369327 - /home/ubuntu/ComfyUI/user2025-06-01T09:15:09.369337 - 
+2025-06-01T09:15:09.369354 - ** ComfyUI-Manager config path:2025-06-01T09:15:09.369366 -  2025-06-01T09:15:09.369379 - /home/ubuntu/ComfyUI/user/default/ComfyUI-Manager/config.ini2025-06-01T09:15:09.369392 - 
+2025-06-01T09:15:09.369407 - ** Log path:2025-06-01T09:15:09.369419 -  2025-06-01T09:15:09.369429 - /home/ubuntu/ComfyUI/user/comfyui.log2025-06-01T09:15:09.369439 - 
+2025-06-01T09:15:10.736956 - 
+Prestartup times for custom nodes:
+2025-06-01T09:15:10.737067 -    5.2 seconds: /home/ubuntu/pre-custom_nodes/ComfyUI-Manager
+2025-06-01T09:15:10.737113 - 
+2025-06-01T09:15:15.070275 - Checkpoint files will always be loaded safely.
+2025-06-01T09:15:15.658606 - Total VRAM 45373 MB, total RAM 31640 MB
+2025-06-01T09:15:15.658787 - pytorch version: 2.7.0+cu126
+2025-06-01T09:15:15.658963 - Set vram state to: HIGH_VRAM
+2025-06-01T09:15:15.659200 - Device: cuda:0 NVIDIA L40S : cudaMallocAsync
+2025-06-01T09:15:19.418354 - Using pytorch attention
+2025-06-01T09:15:23.771911 - Python version: 3.12.6 (main, Oct 25 2024, 13:38:40) [GCC 11.4.0]
+2025-06-01T09:15:23.772102 - ComfyUI version: 0.3.34
+2025-06-01T09:15:23.777092 - ComfyUI frontend version: 1.19.9
+2025-06-01T09:15:23.780594 - [Prompt Server] web root: /opt/tensorflow/lib/python3.12/site-packages/comfyui_frontend_package/static
+2025-06-01T09:15:24.470031 - /opt/tensorflow/lib/python3.12/site-packages/kornia/feature/lightglue.py:44: FutureWarning: `torch.cuda.amp.custom_fwd(args...)` is deprecated. Please use `torch.amp.custom_fwd(args..., device_type='cuda')` instead.
+  @torch.cuda.amp.custom_fwd(cast_inputs=torch.float32)
+2025-06-01T09:15:25.907944 - [36;20m[/home/ubuntu/ComfyUI/custom_nodes/comfyui_controlnet_aux] | INFO -> Using ckpts path: /home/ubuntu/ComfyUI/custom_nodes/comfyui_controlnet_aux/ckpts[0m
+2025-06-01T09:15:25.908141 - [36;20m[/home/ubuntu/ComfyUI/custom_nodes/comfyui_controlnet_aux] | INFO -> Using symlinks: False[0m
+2025-06-01T09:15:25.908293 - [36;20m[/home/ubuntu/ComfyUI/custom_nodes/comfyui_controlnet_aux] | INFO -> Using ort providers: ['CUDAExecutionProvider', 'DirectMLExecutionProvider', 'OpenVINOExecutionProvider', 'ROCMExecutionProvider', 'CPUExecutionProvider', 'CoreMLExecutionProvider'][0m
+2025-06-01T09:15:26.924574 - DWPose: Onnxruntime with acceleration providers detected2025-06-01T09:15:26.924641 - 
+2025-06-01T09:15:27.871536 - 
+2025-06-01T09:15:27.871583 - [92m[rgthree-comfy] Loaded 47 fantastic nodes. 🎉[0m2025-06-01T09:15:27.871604 - 
+2025-06-01T09:15:27.871650 - 
+2025-06-01T09:15:27.882225 - 
+[32mInitializing ControlAltAI Nodes[0m2025-06-01T09:15:27.882285 - 
+2025-06-01T09:15:28.018548 - ComfyUI-GGUF: Partial torch compile only, consider updating pytorch
+2025-06-01T09:15:28.416291 - Adding2025-06-01T09:15:28.416366 -  2025-06-01T09:15:28.416412 - /home/ubuntu/ComfyUI/custom_nodes2025-06-01T09:15:28.416450 -  2025-06-01T09:15:28.416486 - to sys.path2025-06-01T09:15:28.416522 - 
+2025-06-01T09:15:28.416572 - Adding2025-06-01T09:15:28.416661 -  2025-06-01T09:15:28.416735 - /home/ubuntu/pre-custom_nodes2025-06-01T09:15:28.416777 -  2025-06-01T09:15:28.416819 - to sys.path2025-06-01T09:15:28.416854 - 
+2025-06-01T09:15:28.705684 - Could not find efficiency nodes2025-06-01T09:15:28.705726 - 
+2025-06-01T09:15:28.800775 - [36;20m[comfyui_controlnet_aux] | INFO -> Using ckpts path: /home/ubuntu/ComfyUI/custom_nodes/comfyui_controlnet_aux/ckpts[0m
+2025-06-01T09:15:28.801023 - [36;20m[comfyui_controlnet_aux] | INFO -> Using symlinks: False[0m
+2025-06-01T09:15:28.801246 - [36;20m[comfyui_controlnet_aux] | INFO -> Using ort providers: ['CUDAExecutionProvider', 'DirectMLExecutionProvider', 'OpenVINOExecutionProvider', 'ROCMExecutionProvider', 'CPUExecutionProvider', 'CoreMLExecutionProvider'][0m
+2025-06-01T09:15:28.971880 - Loaded ControlNetPreprocessors nodes from2025-06-01T09:15:28.971909 -  2025-06-01T09:15:28.971928 - /home/ubuntu/ComfyUI/custom_nodes/comfyui_controlnet_aux2025-06-01T09:15:28.971945 - 
+2025-06-01T09:15:28.978657 - Could not find AdvancedControlNet nodes2025-06-01T09:15:28.978681 - 
+2025-06-01T09:15:29.029093 - Could not find AnimateDiff nodes2025-06-01T09:15:29.029166 - 
+2025-06-01T09:15:29.035519 - Could not find IPAdapter nodes2025-06-01T09:15:29.035585 - 
+2025-06-01T09:15:29.143690 - Could not find VideoHelperSuite nodes2025-06-01T09:15:29.143722 - 
+2025-06-01T09:15:29.168947 - Could not load ImpactPack nodes2025-06-01T09:15:29.169007 -  2025-06-01T09:15:29.169047 - Could not find ImpactPack nodes2025-06-01T09:15:29.169067 - 
+2025-06-01T09:15:29.917135 - [34mWAS Node Suite: [0mImporting styles from `/home/ubuntu/ComfyUI/custom_nodes/was-node-suite-comfyui/mystyles.csv`.[0m2025-06-01T09:15:29.917169 - 
+2025-06-01T09:15:29.973039 - [34mWAS Node Suite: [0mStyles import complete.[0m2025-06-01T09:15:29.973069 - 
+2025-06-01T09:15:30.801032 - NumExpr defaulting to 4 threads.
+2025-06-01T09:15:41.285210 - [34mWAS Node Suite: [0mOpenCV Python FFMPEG support is enabled[0m2025-06-01T09:15:41.285261 - 
+2025-06-01T09:15:41.285319 - [34mWAS Node Suite [93mWarning: [0m`ffmpeg_bin_path` is not set in `/home/ubuntu/ComfyUI/custom_nodes/was-node-suite-comfyui/was_suite_config.json` config file. Will attempt to use system ffmpeg binaries if available.[0m2025-06-01T09:15:41.285343 - 
+2025-06-01T09:15:41.796663 - [34mWAS Node Suite: [0mFinished.[0m [32mLoaded[0m [0m220[0m [32mnodes successfully.[0m2025-06-01T09:15:41.796703 - 
+2025-06-01T09:15:41.796736 - 
+	[3m[93m"Your time is limited, don't waste it living someone else's life."[0m[3m - Steve Jobs[0m
+2025-06-01T09:15:41.796755 - 
+2025-06-01T09:15:44.266551 - [34m[ComfyUI-Easy-Use] server: [0mv1.3.1 [92mLoaded[0m2025-06-01T09:15:44.266689 - 
+2025-06-01T09:15:44.266764 - [34m[ComfyUI-Easy-Use] web root: [0m/home/ubuntu/ComfyUI/custom_nodes/ComfyUI-Easy-Use/web_version/v2 [92mLoaded[0m2025-06-01T09:15:44.266808 - 
+2025-06-01T09:15:44.525716 - ------------------------------------------2025-06-01T09:15:44.525743 - 
+2025-06-01T09:15:44.525764 - [34mComfyroll Studio v1.76 : [92m 175 Nodes Loaded[0m2025-06-01T09:15:44.525781 - 
+2025-06-01T09:15:44.525799 - ------------------------------------------2025-06-01T09:15:44.525815 - 
+2025-06-01T09:15:44.525833 - ** For changes, please see patch notes at https://github.com/Suzie1/ComfyUI_Comfyroll_CustomNodes/blob/main/Patch_Notes.md2025-06-01T09:15:44.525858 - 
+2025-06-01T09:15:44.525877 - ** For help, please see the wiki at https://github.com/Suzie1/ComfyUI_Comfyroll_CustomNodes/wiki2025-06-01T09:15:44.525900 - 
+2025-06-01T09:15:44.525917 - ------------------------------------------2025-06-01T09:15:44.525933 - 
+2025-06-01T09:15:45.084398 - ### Loading: ComfyUI-Impact-Pack (V8.15.1)2025-06-01T09:15:45.084476 - 
+2025-06-01T09:15:45.324263 - [Impact Pack] Wildcards loading done.2025-06-01T09:15:45.324342 - 
+2025-06-01T09:15:45.401125 - [Crystools [0;32mINFO[0m] Crystools version: 1.22.1
+2025-06-01T09:15:45.555135 - [Crystools [0;32mINFO[0m] CPU: AMD EPYC 7R13 Processor - Arch: x86_64 - OS: Linux 6.8.0-1017-aws
+2025-06-01T09:15:45.555285 - [Crystools [0;32mINFO[0m] Pynvml (Nvidia) initialized.
+2025-06-01T09:15:45.555448 - [Crystools [0;32mINFO[0m] GPU/s:
+2025-06-01T09:15:45.555570 - [Crystools [0;32mINFO[0m] 0) NVIDIA L40S
+2025-06-01T09:15:45.555698 - [Crystools [0;32mINFO[0m] NVIDIA Driver: 550.127.05
+2025-06-01T09:15:45.612336 - Total VRAM 45373 MB, total RAM 31640 MB
+2025-06-01T09:15:45.612408 - pytorch version: 2.7.0+cu126
+2025-06-01T09:15:45.612499 - Set vram state to: HIGH_VRAM
+2025-06-01T09:15:45.612583 - Device: cuda:0 NVIDIA L40S : cudaMallocAsync
+2025-06-01T09:15:47.168835 - ### Loading: ComfyUI-Manager (V3.31.7)
+2025-06-01T09:15:47.169222 - [ComfyUI-Manager] network_mode: public
+2025-06-01T09:15:47.293209 - ### ComfyUI Version: v0.3.34-26-gd8e56628 | Released on '2025-05-18'
+2025-06-01T09:15:47.731712 - 
+Import times for custom nodes:
+2025-06-01T09:15:47.731865 -    0.0 seconds: /home/ubuntu/ComfyUI/custom_nodes/websocket_image_save.py
+2025-06-01T09:15:47.731943 -    0.1 seconds: /home/ubuntu/ComfyUI/custom_nodes/ComfyUI-GGUF
+2025-06-01T09:15:47.732021 -    0.1 seconds: /home/ubuntu/ComfyUI/custom_nodes/comfyui-florence2
+2025-06-01T09:15:47.732370 -    0.1 seconds: /home/ubuntu/ComfyUI/custom_nodes/ControlAltAI-Nodes
+2025-06-01T09:15:47.732717 -    0.1 seconds: /home/ubuntu/ComfyUI/custom_nodes/comfyui_essentials
+2025-06-01T09:15:47.732872 -    0.1 seconds: /home/ubuntu/ComfyUI/custom_nodes/comfyui-kjnodes
+2025-06-01T09:15:47.733241 -    0.3 seconds: /home/ubuntu/ComfyUI/custom_nodes/ComfyUI-Crystools
+2025-06-01T09:15:47.733328 -    0.3 seconds: /home/ubuntu/ComfyUI/custom_nodes/ComfyUI_Comfyroll_CustomNodes
+2025-06-01T09:15:47.733525 -    0.3 seconds: /home/ubuntu/ComfyUI/custom_nodes/comfyui-impact-pack
+2025-06-01T09:15:47.733608 -    0.3 seconds: /home/ubuntu/ComfyUI/custom_nodes/comfyui-videohelpersuite
+2025-06-01T09:15:47.733700 -    0.4 seconds: /home/ubuntu/ComfyUI/custom_nodes/rgthree-comfy
+2025-06-01T09:15:47.733765 -    0.5 seconds: /home/ubuntu/ComfyUI/custom_nodes/comfyui-depthanythingv2
+2025-06-01T09:15:47.733829 -    0.5 seconds: /home/ubuntu/ComfyUI/custom_nodes/ComfyUI-iTools
+2025-06-01T09:15:47.733891 -    0.6 seconds: /home/ubuntu/pre-custom_nodes/ComfyUI-Manager
+2025-06-01T09:15:47.734033 -    0.8 seconds: /home/ubuntu/ComfyUI/custom_nodes/comfyui-art-venture
+2025-06-01T09:15:47.734102 -    1.4 seconds: /home/ubuntu/ComfyUI/custom_nodes/comfyui_controlnet_aux
+2025-06-01T09:15:47.734167 -    1.5 seconds: /home/ubuntu/ComfyUI/custom_nodes/ComfyUI-WanVideoWrapper
+2025-06-01T09:15:47.734231 -    2.4 seconds: /home/ubuntu/ComfyUI/custom_nodes/ComfyUI-Easy-Use
+2025-06-01T09:15:47.734293 -   12.6 seconds: /home/ubuntu/ComfyUI/custom_nodes/was-node-suite-comfyui
+2025-06-01T09:15:47.734354 - 
+2025-06-01T09:15:47.757146 - [ComfyUI-Manager] default cache updated: https://raw.githubusercontent.com/ltdrdata/ComfyUI-Manager/main/alter-list.json
+2025-06-01T09:15:47.782488 - [ComfyUI-Manager] default cache updated: https://raw.githubusercontent.com/ltdrdata/ComfyUI-Manager/main/extension-node-map.json
+2025-06-01T09:15:47.790338 - [ComfyUI-Manager] default cache updated: https://raw.githubusercontent.com/ltdrdata/ComfyUI-Manager/main/model-list.json
+2025-06-01T09:15:47.821005 - [ComfyUI-Manager] default cache updated: https://raw.githubusercontent.com/ltdrdata/ComfyUI-Manager/main/custom-node-list.json
+2025-06-01T09:15:47.835109 - [ComfyUI-Manager] default cache updated: https://raw.githubusercontent.com/ltdrdata/ComfyUI-Manager/main/github-stats.json
+2025-06-01T09:15:47.901475 - Starting server
+
+2025-06-01T09:15:47.901722 - To see the GUI go to: http://0.0.0.0:7860
+2025-06-01T09:15:47.901869 - To see the GUI go to: http://[::]:7860
+2025-06-01T09:15:50.148579 - FETCH ComfyRegistry Data: 5/872025-06-01T09:15:50.151737 - 
+2025-06-01T09:15:52.964763 - FETCH ComfyRegistry Data: 10/872025-06-01T09:15:52.964800 - 
+2025-06-01T09:15:55.760302 - FETCH ComfyRegistry Data: 15/872025-06-01T09:15:55.760341 - 
+2025-06-01T09:15:58.547868 - FETCH ComfyRegistry Data: 20/872025-06-01T09:15:58.547903 - 
+2025-06-01T09:16:01.349028 - FETCH ComfyRegistry Data: 25/872025-06-01T09:16:01.349062 - 
+2025-06-01T09:16:04.157257 - FETCH ComfyRegistry Data: 30/872025-06-01T09:16:04.157290 - 
+2025-06-01T09:16:07.037969 - FETCH ComfyRegistry Data: 35/872025-06-01T09:16:07.038003 - 
+2025-06-01T09:16:09.830803 - FETCH ComfyRegistry Data: 40/872025-06-01T09:16:09.830835 - 
+2025-06-01T09:16:12.628263 - FETCH ComfyRegistry Data: 45/872025-06-01T09:16:12.628316 - 
+2025-06-01T09:16:15.535492 - FETCH ComfyRegistry Data: 50/872025-06-01T09:16:15.535556 - 
+2025-06-01T09:16:18.353550 - FETCH ComfyRegistry Data: 55/872025-06-01T09:16:18.353584 - 
+2025-06-01T09:16:21.166298 - FETCH ComfyRegistry Data: 60/872025-06-01T09:16:21.166912 - 
+2025-06-01T09:16:23.981553 - FETCH ComfyRegistry Data: 65/872025-06-01T09:16:23.981586 - 
+2025-06-01T09:16:26.790879 - FETCH ComfyRegistry Data: 70/872025-06-01T09:16:26.790911 - 
+2025-06-01T09:16:29.606125 - FETCH ComfyRegistry Data: 75/872025-06-01T09:16:29.606158 - 
+2025-06-01T09:16:32.441469 - FETCH ComfyRegistry Data: 80/872025-06-01T09:16:32.441501 - 
+2025-06-01T09:16:35.239019 - FETCH ComfyRegistry Data: 85/872025-06-01T09:16:35.239076 - 
+2025-06-01T09:16:36.884034 - FETCH ComfyRegistry Data [DONE]2025-06-01T09:16:36.884144 - 
+2025-06-01T09:16:36.956246 - [ComfyUI-Manager] default cache updated: https://api.comfy.org/nodes
+2025-06-01T09:16:37.197959 - FETCH DATA from: https://raw.githubusercontent.com/ltdrdata/ComfyUI-Manager/main/custom-node-list.json2025-06-01T09:16:37.198010 - 2025-06-01T09:16:37.219372 -  [DONE]2025-06-01T09:16:37.219396 - 
+2025-06-01T09:16:37.251211 - [ComfyUI-Manager] All startup tasks have been completed.
+2025-06-01T09:17:32.155284 - got prompt
+2025-06-01T09:17:32.267506 - Loading model from: /home/ubuntu/ComfyUI/models/depthanything/depth_anything_v2_vitl_fp16.safetensors2025-06-01T09:17:32.267569 - 
+2025-06-01T09:17:32.275729 - using MLP layer as FFN
+2025-06-01T09:18:01.002605 - refs shape2025-06-01T09:18:01.002682 -  2025-06-01T09:18:01.002707 - torch.Size([1, 3, 1, 1024, 576])2025-06-01T09:18:01.002723 - 
+2025-06-01T09:18:57.083752 - Detected model in_channels: 48
+2025-06-01T09:18:57.084193 - Model type: i2v, num_heads: 40, num_layers: 40
+2025-06-01T09:18:57.084267 - Model variant detected: i2v_480
+2025-06-01T09:18:57.194284 - model_type FLOW
+2025-06-01T09:18:57.194370 - Using accelerate to load and assign model weights to device...
+2025-06-01T09:18:57.632629 - 
+Loading transformer parameters to cuda:0:  46%|████▌     | 596/1303 [00:00<00:00, 1776.73it/s]2025-06-01T09:18:57.788596 - 
+Loading transformer parameters to cuda:0:  90%|████████▉ | 1169/1303 [00:00<00:00, 1974.59it/s]2025-06-01T09:18:57.788731 - 
+2025-06-01T09:18:57.789886 - !!! Exception during processing !!! Allocation on device 
+2025-06-01T09:18:57.807608 - Traceback (most recent call last):
+  File "/home/ubuntu/ComfyUI/execution.py", line 349, in execute
+    output_data, output_ui, has_subgraph = get_output_data(obj, input_data_all, execution_block_cb=execution_block_cb, pre_execute_cb=pre_execute_cb)
+                                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/ComfyUI/execution.py", line 224, in get_output_data
+    return_values = _map_node_over_list(obj, input_data_all, obj.FUNCTION, allow_interrupt=True, execution_block_cb=execution_block_cb, pre_execute_cb=pre_execute_cb)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/ComfyUI/execution.py", line 196, in _map_node_over_list
+    process_inputs(input_dict, i)
+  File "/home/ubuntu/ComfyUI/execution.py", line 185, in process_inputs
+    results.append(getattr(obj, func)(**inputs))
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/ComfyUI/custom_nodes/ComfyUI-WanVideoWrapper/nodes.py", line 689, in loadmodel
+    set_module_tensor_to_device(transformer, name, device=transformer_load_device, dtype=dtype_to_use, value=sd[name])
+  File "/opt/tensorflow/lib/python3.12/site-packages/accelerate/utils/modeling.py", line 294, in set_module_tensor_to_device
+    value = value.to(dtype)
+            ^^^^^^^^^^^^^^^
+torch.OutOfMemoryError: Allocation on device 
+
+2025-06-01T09:18:57.808224 - Got an OOM, unloading all loaded models.
+2025-06-01T09:18:57.808485 - Prompt executed in 85.57 seconds
+2025-06-01T09:25:44.544164 - got prompt
+2025-06-01T09:25:55.116853 - Detected model in_channels: 48
+2025-06-01T09:25:55.117190 - Model type: i2v, num_heads: 12, num_layers: 30
+2025-06-01T09:25:55.117253 - Model variant detected: 1_3B
+2025-06-01T09:25:55.188228 - model_type FLOW
+2025-06-01T09:25:55.188312 - Using accelerate to load and assign model weights to device...
+2025-06-01T09:25:55.289654 - 
+Loading transformer parameters to cuda:0:  69%|██████▊   | 675/983 [00:00<00:00, 6747.66it/s]2025-06-01T09:25:55.307743 - 
+Loading transformer parameters to cuda:0: 100%|██████████| 983/983 [00:00<00:00, 8319.83it/s]2025-06-01T09:25:55.307774 - 
+2025-06-01T09:26:32.658656 - Moving video model to cuda:0
+2025-06-01T09:26:33.416439 - timesteps: 2025-06-01T09:26:33.416482 -  2025-06-01T09:26:33.421395 - tensor([999, 993, 986, 978, 969, 959, 949, 936, 923, 907, 888, 867, 842, 811,
+        774, 727, 666, 585, 470, 296], device='cuda:0')2025-06-01T09:26:33.421421 - 
+2025-06-01T09:26:33.447286 - Seq len: 50688
+2025-06-01T09:26:33.457116 - previewer: 2025-06-01T09:26:33.457140 -  2025-06-01T09:26:33.457158 - None2025-06-01T09:26:33.457173 - 
+2025-06-01T09:26:33.463646 - TeaCache: Using cache device: cuda:0
+2025-06-01T09:26:33.463750 - Sampling 85 frames at 576x1024 with 20 steps
+2025-06-01T09:26:33.997397 - 
+  0%|          | 0/20 [00:00<?, ?it/s]2025-06-01T09:26:34.025175 - 
+  0%|          | 0/20 [00:00<?, ?it/s]2025-06-01T09:26:34.025211 - 
+2025-06-01T09:26:34.199413 - !!! Exception during processing !!! Given groups=1, weight of size [1536, 48, 1, 2, 2], expected input[1, 16, 22, 128, 72] to have 48 channels, but got 16 channels instead
+2025-06-01T09:26:34.224556 - Traceback (most recent call last):
+  File "/home/ubuntu/ComfyUI/execution.py", line 349, in execute
+    output_data, output_ui, has_subgraph = get_output_data(obj, input_data_all, execution_block_cb=execution_block_cb, pre_execute_cb=pre_execute_cb)
+                                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/ComfyUI/execution.py", line 224, in get_output_data
+    return_values = _map_node_over_list(obj, input_data_all, obj.FUNCTION, allow_interrupt=True, execution_block_cb=execution_block_cb, pre_execute_cb=pre_execute_cb)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/ComfyUI/execution.py", line 196, in _map_node_over_list
+    process_inputs(input_dict, i)
+  File "/home/ubuntu/ComfyUI/execution.py", line 185, in process_inputs
+    results.append(getattr(obj, func)(**inputs))
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/ComfyUI/custom_nodes/ComfyUI-WanVideoWrapper/nodes.py", line 3289, in process
+    noise_pred, self.teacache_state = predict_with_cfg(
+                                      ^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/ComfyUI/custom_nodes/ComfyUI-WanVideoWrapper/nodes.py", line 2923, in predict_with_cfg
+    noise_pred_cond, teacache_state_cond = transformer(
+                                           ^^^^^^^^^^^^
+  File "/opt/tensorflow/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1751, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/tensorflow/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1762, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/ComfyUI/custom_nodes/ComfyUI-WanVideoWrapper/wanvideo/modules/model.py", line 1220, in forward
+    self.original_patch_embedding(u.unsqueeze(0).to(torch.float32)).to(x[0].dtype)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/tensorflow/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1751, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/tensorflow/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1762, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/tensorflow/lib/python3.12/site-packages/torch/nn/modules/conv.py", line 725, in forward
+    return self._conv_forward(input, self.weight, self.bias)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/tensorflow/lib/python3.12/site-packages/torch/nn/modules/conv.py", line 720, in _conv_forward
+    return F.conv3d(
+           ^^^^^^^^^
+RuntimeError: Given groups=1, weight of size [1536, 48, 1, 2, 2], expected input[1, 16, 22, 128, 72] to have 48 channels, but got 16 channels instead
+
+2025-06-01T09:26:34.226340 - Prompt executed in 49.61 seconds
+
+```
+## Attached Workflow
+Please make sure that workflow does not contain any sensitive information such as API keys or passwords.
+```
+Workflow too large. Please manually upload the workflow from local file system.
+```
+
+## Additional Context
+(Please add any additional context or steps to reproduce the error here)

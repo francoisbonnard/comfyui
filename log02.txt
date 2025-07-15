@@ -1,0 +1,348 @@
+Adding extra search path checkpoints /home/ubuntu/user_data/comfyui/models/checkpoints
+Adding extra search path vae /home/ubuntu/user_data/comfyui/models/VAE
+Adding extra search path loras /home/ubuntu/user_data/comfyui/models/Lora
+Adding extra search path loras /home/ubuntu/user_data/comfyui/models/LyCORIS
+Adding extra search path upscale_models /home/ubuntu/user_data/comfyui/models/ESRGAN
+Adding extra search path upscale_models /home/ubuntu/user_data/comfyui/models/RealESRGAN
+Adding extra search path upscale_models /home/ubuntu/user_data/comfyui/models/SwinIR
+Adding extra search path embeddings /home/ubuntu/user_data/comfyui/models/embeddings
+Adding extra search path hypernetworks /home/ubuntu/user_data/comfyui/models/hypernetworks
+Adding extra search path controlnet /home/ubuntu/user_data/comfyui/models/ControlNet
+Adding extra search path ipadapter /home/ubuntu/user_data/comfyui/models/ipadapter
+Adding extra search path remgb /home/ubuntu/user_data/comfyui/pre_models/models/rembg
+Adding extra search path unet /home/ubuntu/user_data/comfyui/models/unet
+Adding extra search path checkpoints /home/ubuntu/user_data/comfyui/models/Stable-diffusion
+Adding extra search path clip /home/ubuntu/user_data/comfyui/models/clip
+Adding extra search path clip_vision /home/ubuntu/user_data/comfyui/models/clip_vision
+Adding extra search path configs /home/ubuntu/user_data/comfyui/configs
+Adding extra search path checkpoints /home/ubuntu/pre_models/models/checkpoints
+Adding extra search path loras /home/ubuntu/pre_models/models/Lora
+Adding extra search path controlnet /home/ubuntu/pre_models/models/ControlNet
+Adding extra search path unet /home/ubuntu/pre_models/models/unet
+Adding extra search path remgb /home/ubuntu/pre_models/models/rembg
+Adding extra search path clip /home/ubuntu/pre_models/models/clip
+Adding extra search path vae /home/ubuntu/pre_models/models/VAE
+Adding extra search path ipadapter /home/ubuntu/pre_models/models/ipadapter
+Adding extra search path clip_vision /home/ubuntu/pre_models/models/clip_vision
+Adding extra search path custom_nodes /home/ubuntu/pre-custom_nodes
+Setting output directory to: /home/ubuntu/user_data/comfyui/outputs
+DEPRECATION: Loading egg at /opt/tensorflow/lib/python3.12/site-packages/custom_rasterizer-0.1-py3.12-linux-x86_64.egg is deprecated. pip 25.1 will enforce this behaviour change. A possible replacement is to use pip for package installation. Discussion can be found at https://github.com/pypa/pip/issues/12330
+[START] Security scan
+[DONE] Security scan
+## ComfyUI-Manager: installing dependencies done.
+** ComfyUI startup time: 2025-05-31 12:05:58.728
+** Platform: Linux
+** Python version: 3.12.6 (main, Oct 25 2024, 13:38:40) [GCC 11.4.0]
+** Python executable: /opt/tensorflow/bin/python3
+** ComfyUI Path: /home/ubuntu/ComfyUI
+** ComfyUI Base Folder Path: /home/ubuntu/ComfyUI
+** User directory: /home/ubuntu/ComfyUI/user
+** ComfyUI-Manager config path: /home/ubuntu/ComfyUI/user/default/ComfyUI-Manager/config.ini
+** Log path: /home/ubuntu/ComfyUI/user/comfyui.log
+DEPRECATION: Loading egg at /opt/tensorflow/lib/python3.12/site-packages/custom_rasterizer-0.1-py3.12-linux-x86_64.egg is deprecated. pip 25.1 will enforce this behaviour change. A possible replacement is to use pip for package installation. Discussion can be found at https://github.com/pypa/pip/issues/12330
+DEPRECATION: Loading egg at /opt/tensorflow/lib/python3.12/site-packages/custom_rasterizer-0.1-py3.12-linux-x86_64.egg is deprecated. pip 25.1 will enforce this behaviour change. A possible replacement is to use pip for package installation. Discussion can be found at https://github.com/pypa/pip/issues/12330
+
+Prestartup times for custom nodes:
+  60.1 seconds: /home/ubuntu/pre-custom_nodes/ComfyUI-Manager
+
+Checkpoint files will always be loaded safely.
+Total VRAM 22478 MB, total RAM 30883 MB
+pytorch version: 2.7.0+cu126
+Set vram state to: HIGH_VRAM
+Device: cuda:0 NVIDIA L4 : cudaMallocAsync
+Using pytorch attention
+Python version: 3.12.6 (main, Oct 25 2024, 13:38:40) [GCC 11.4.0]
+ComfyUI version: 0.3.34
+ComfyUI frontend version: 1.19.9
+[Prompt Server] web root: /opt/tensorflow/lib/python3.12/site-packages/comfyui_frontend_package/static
+/opt/tensorflow/lib/python3.12/site-packages/kornia/feature/lightglue.py:44: FutureWarning: `torch.cuda.amp.custom_fwd(args...)` is deprecated. Please use `torch.amp.custom_fwd(args..., device_type='cuda')` instead.
+  @torch.cuda.amp.custom_fwd(cast_inputs=torch.float32)
+[36;20m[/home/ubuntu/ComfyUI/custom_nodes/comfyui_controlnet_aux] | INFO -> Using ckpts path: /home/ubuntu/ComfyUI/custom_nodes/comfyui_controlnet_aux/ckpts[0m
+[36;20m[/home/ubuntu/ComfyUI/custom_nodes/comfyui_controlnet_aux] | INFO -> Using symlinks: False[0m
+[36;20m[/home/ubuntu/ComfyUI/custom_nodes/comfyui_controlnet_aux] | INFO -> Using ort providers: ['CUDAExecutionProvider', 'DirectMLExecutionProvider', 'OpenVINOExecutionProvider', 'ROCMExecutionProvider', 'CPUExecutionProvider', 'CoreMLExecutionProvider'][0m
+DWPose: Onnxruntime with acceleration providers detected
+
+[92m[rgthree-comfy] Loaded 47 exciting nodes. 🎉[0m
+
+
+[32mInitializing ControlAltAI Nodes[0m
+ComfyUI-GGUF: Partial torch compile only, consider updating pytorch
+Adding /home/ubuntu/ComfyUI/custom_nodes to sys.path
+Adding /home/ubuntu/pre-custom_nodes to sys.path
+Could not find efficiency nodes
+[36;20m[comfyui_controlnet_aux] | INFO -> Using ckpts path: /home/ubuntu/ComfyUI/custom_nodes/comfyui_controlnet_aux/ckpts[0m
+[36;20m[comfyui_controlnet_aux] | INFO -> Using symlinks: False[0m
+[36;20m[comfyui_controlnet_aux] | INFO -> Using ort providers: ['CUDAExecutionProvider', 'DirectMLExecutionProvider', 'OpenVINOExecutionProvider', 'ROCMExecutionProvider', 'CPUExecutionProvider', 'CoreMLExecutionProvider'][0m
+Loaded ControlNetPreprocessors nodes from /home/ubuntu/ComfyUI/custom_nodes/comfyui_controlnet_aux
+Could not find AdvancedControlNet nodes
+Could not find AnimateDiff nodes
+Could not find IPAdapter nodes
+Could not find VideoHelperSuite nodes
+Could not load ImpactPack nodes Could not find ImpactPack nodes
+[34mWAS Node Suite: [0mImporting styles from `/home/ubuntu/ComfyUI/custom_nodes/was-node-suite-comfyui/mystyles.csv`.[0m
+[34mWAS Node Suite: [0mStyles import complete.[0m
+NumExpr defaulting to 8 threads.
+2025-05-31 12:09:26.459580: E external/local_xla/xla/stream_executor/cuda/cuda_fft.cc:485] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
+2025-05-31 12:09:28.601263: E external/local_xla/xla/stream_executor/cuda/cuda_dnn.cc:8454] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
+2025-05-31 12:09:30.698025: E external/local_xla/xla/stream_executor/cuda/cuda_blas.cc:1452] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
+2025-05-31 12:09:43.302585: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2025-05-31 12:09:54.383468: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
+[34mWAS Node Suite: [0mOpenCV Python FFMPEG support is enabled[0m
+[34mWAS Node Suite [93mWarning: [0m`ffmpeg_bin_path` is not set in `/home/ubuntu/ComfyUI/custom_nodes/was-node-suite-comfyui/was_suite_config.json` config file. Will attempt to use system ffmpeg binaries if available.[0m
+[34mWAS Node Suite: [0mFinished.[0m [32mLoaded[0m [0m220[0m [32mnodes successfully.[0m
+
+	[3m[93m"Art is the journey of a free soul."[0m[3m - Alev Oguz[0m
+
+[34m[ComfyUI-Easy-Use] server: [0mv1.3.1 [92mLoaded[0m
+[34m[ComfyUI-Easy-Use] web root: [0m/home/ubuntu/ComfyUI/custom_nodes/ComfyUI-Easy-Use/web_version/v2 [92mLoaded[0m
+------------------------------------------
+[34mComfyroll Studio v1.76 : [92m 175 Nodes Loaded[0m
+------------------------------------------
+** For changes, please see patch notes at https://github.com/Suzie1/ComfyUI_Comfyroll_CustomNodes/blob/main/Patch_Notes.md
+** For help, please see the wiki at https://github.com/Suzie1/ComfyUI_Comfyroll_CustomNodes/wiki
+------------------------------------------
+### Loading: ComfyUI-Impact-Pack (V8.15.1)
+[Impact Pack] Wildcards loading done.
+[Crystools [0;32mINFO[0m] Crystools version: 1.22.1
+[Crystools [0;32mINFO[0m] CPU: AMD EPYC 7R13 Processor - Arch: x86_64 - OS: Linux 6.8.0-1017-aws
+[Crystools [0;32mINFO[0m] Pynvml (Nvidia) initialized.
+[Crystools [0;32mINFO[0m] GPU/s:
+[Crystools [0;32mINFO[0m] 0) NVIDIA L4
+[Crystools [0;32mINFO[0m] NVIDIA Driver: 550.127.05
+Total VRAM 22478 MB, total RAM 30883 MB
+pytorch version: 2.7.0+cu126
+Set vram state to: HIGH_VRAM
+Device: cuda:0 NVIDIA L4 : cudaMallocAsync
+### Loading: ComfyUI-Manager (V3.31.7)
+[ComfyUI-Manager] network_mode: public
+### ComfyUI Version: v0.3.34-26-gd8e56628 | Released on '2025-05-18'
+
+Import times for custom nodes:
+   0.0 seconds: /home/ubuntu/ComfyUI/custom_nodes/websocket_image_save.py
+   0.1 seconds: /home/ubuntu/ComfyUI/custom_nodes/comfyui_essentials
+   0.1 seconds: /home/ubuntu/ComfyUI/custom_nodes/ControlAltAI-Nodes
+   0.2 seconds: /home/ubuntu/ComfyUI/custom_nodes/comfyui-florence2
+   0.2 seconds: /home/ubuntu/ComfyUI/custom_nodes/ComfyUI-GGUF
+   0.4 seconds: /home/ubuntu/ComfyUI/custom_nodes/comfyui-kjnodes
+   0.4 seconds: /home/ubuntu/ComfyUI/custom_nodes/ComfyUI_Comfyroll_CustomNodes
+   0.5 seconds: /home/ubuntu/ComfyUI/custom_nodes/rgthree-comfy
+   0.5 seconds: /home/ubuntu/ComfyUI/custom_nodes/comfyui-impact-pack
+   0.5 seconds: /home/ubuntu/ComfyUI/custom_nodes/ComfyUI-Crystools
+   0.7 seconds: /home/ubuntu/ComfyUI/custom_nodes/ComfyUI-iTools
+   1.4 seconds: /home/ubuntu/pre-custom_nodes/ComfyUI-Manager
+   1.8 seconds: /home/ubuntu/ComfyUI/custom_nodes/comfyui-art-venture
+   1.9 seconds: /home/ubuntu/ComfyUI/custom_nodes/comfyui-depthanythingv2
+   3.1 seconds: /home/ubuntu/ComfyUI/custom_nodes/comfyui-videohelpersuite
+   3.5 seconds: /home/ubuntu/ComfyUI/custom_nodes/ComfyUI-WanVideoWrapper
+   8.7 seconds: /home/ubuntu/ComfyUI/custom_nodes/ComfyUI-Easy-Use
+   9.3 seconds: /home/ubuntu/ComfyUI/custom_nodes/comfyui_controlnet_aux
+  82.9 seconds: /home/ubuntu/ComfyUI/custom_nodes/was-node-suite-comfyui
+
+[ComfyUI-Manager] default cache updated: https://raw.githubusercontent.com/ltdrdata/ComfyUI-Manager/main/model-list.json
+[ComfyUI-Manager] default cache updated: https://raw.githubusercontent.com/ltdrdata/ComfyUI-Manager/main/alter-list.json
+[ComfyUI-Manager] default cache updated: https://raw.githubusercontent.com/ltdrdata/ComfyUI-Manager/main/extension-node-map.json
+[ComfyUI-Manager] default cache updated: https://raw.githubusercontent.com/ltdrdata/ComfyUI-Manager/main/custom-node-list.json
+[ComfyUI-Manager] default cache updated: https://raw.githubusercontent.com/ltdrdata/ComfyUI-Manager/main/github-stats.json
+Starting server
+
+To see the GUI go to: http://0.0.0.0:7860
+To see the GUI go to: http://[::]:7860
+FETCH ComfyRegistry Data: 5/87
+FETCH ComfyRegistry Data: 10/87
+FETCH ComfyRegistry Data: 15/87
+FETCH ComfyRegistry Data: 20/87
+FETCH ComfyRegistry Data: 25/87
+FETCH ComfyRegistry Data: 30/87
+FETCH ComfyRegistry Data: 35/87
+FETCH ComfyRegistry Data: 40/87
+FETCH ComfyRegistry Data: 45/87
+FETCH ComfyRegistry Data: 50/87
+FETCH ComfyRegistry Data: 55/87
+FETCH ComfyRegistry Data: 60/87
+FETCH ComfyRegistry Data: 65/87
+FETCH ComfyRegistry Data: 70/87
+FETCH ComfyRegistry Data: 75/87
+FETCH ComfyRegistry Data: 80/87
+FETCH ComfyRegistry Data: 85/87
+FETCH ComfyRegistry Data [DONE]
+[ComfyUI-Manager] default cache updated: https://api.comfy.org/nodes
+FETCH DATA from: https://raw.githubusercontent.com/ltdrdata/ComfyUI-Manager/main/custom-node-list.json [DONE]
+[ComfyUI-Manager] All startup tasks have been completed.
+got prompt
+Failed to validate prompt for output 165:
+* WanVideoModelLoader 22:
+  - Value not in list: model: 'VACE-Wan2.1-1.3B-Preview.safetensors' not in ['Wan2.1-Fun-Control-14B_fp8_e4m3fn.safetensors', 'Wan2_1-I2V-14B-480P_fp8_e4m3fn.safetensors', 'Wan2_1-I2V-14B-720P_fp8_e4m3fn.safetensors', 'Wan_2.1_Fun_Control_1.3B.safetensors', 'flux1-canny-dev.safetensors', 'flux1-depth-dev.safetensors', 'flux1-dev-fp8.safetensors', 'flux1-dev.safetensors', 'flux1-fill-dev.safetensors', 'flux1-schnell-fp8.safetensors', 'flux1CannyDevFp8_v10.safetensors', 'flux1DepthDevFp8_v10.safetensors', 'hunyuan_video_I2V_fp8_e4m3fn.safetensors', 'hunyuan_video_v2_replace_image_to_video_720p_bf16.safetensors', 'wan2.1_i2v_720p_14B_fp16.safetensors', 'wan2.1_i2v_720p_14B_fp8_scaled.safetensors', 'wan2.1_t2v_1.3B_fp16.safetensors']
+Output will be ignored
+Failed to validate prompt for output 234:
+Output will be ignored
+Loading model from: /home/ubuntu/ComfyUI/models/depthanything/depth_anything_v2_vitl_fp16.safetensors
+using MLP layer as FFN
+Prompt executed in 32.87 seconds
+got prompt
+refs shape torch.Size([1, 3, 1, 1024, 576])
+Detected model in_channels: 48
+Model type: i2v, num_heads: 12, num_layers: 30
+Model variant detected: 1_3B
+model_type FLOW
+Using accelerate to load and assign model weights to device...
+
+Loading transformer parameters to cuda:0:   0%|          | 0/983 [00:00<?, ?it/s]
+Loading transformer parameters to cuda:0:  57%|█████▋    | 556/983 [00:00<00:00, 5557.29it/s]
+Loading transformer parameters to cuda:0: 100%|██████████| 983/983 [00:00<00:00, 7901.74it/s]
+Moving video model to cuda:0
+timesteps:  tensor([999, 993, 986, 978, 969, 959, 949, 936, 923, 907, 888, 867, 842, 811,
+        774, 727, 666, 585, 470, 296], device='cuda:0')
+Seq len: 50688
+previewer:  None
+TeaCache: Using cache device: cuda:0
+Sampling 85 frames at 576x1024 with 20 steps
+
+  0%|          | 0/20 [00:00<?, ?it/s]
+  0%|          | 0/20 [00:01<?, ?it/s]
+!!! Exception during processing !!! Given groups=1, weight of size [1536, 48, 1, 2, 2], expected input[1, 16, 22, 128, 72] to have 48 channels, but got 16 channels instead
+Traceback (most recent call last):
+  File "/home/ubuntu/ComfyUI/execution.py", line 349, in execute
+    output_data, output_ui, has_subgraph = get_output_data(obj, input_data_all, execution_block_cb=execution_block_cb, pre_execute_cb=pre_execute_cb)
+                                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/ComfyUI/execution.py", line 224, in get_output_data
+    return_values = _map_node_over_list(obj, input_data_all, obj.FUNCTION, allow_interrupt=True, execution_block_cb=execution_block_cb, pre_execute_cb=pre_execute_cb)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/ComfyUI/execution.py", line 196, in _map_node_over_list
+    process_inputs(input_dict, i)
+  File "/home/ubuntu/ComfyUI/execution.py", line 185, in process_inputs
+    results.append(getattr(obj, func)(**inputs))
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/ComfyUI/custom_nodes/ComfyUI-WanVideoWrapper/nodes.py", line 3289, in process
+    noise_pred, self.teacache_state = predict_with_cfg(
+                                      ^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/ComfyUI/custom_nodes/ComfyUI-WanVideoWrapper/nodes.py", line 2923, in predict_with_cfg
+    noise_pred_cond, teacache_state_cond = transformer(
+                                           ^^^^^^^^^^^^
+  File "/opt/tensorflow/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1751, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/tensorflow/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1762, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/ComfyUI/custom_nodes/ComfyUI-WanVideoWrapper/wanvideo/modules/model.py", line 1220, in forward
+    self.original_patch_embedding(u.unsqueeze(0).to(torch.float32)).to(x[0].dtype)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/tensorflow/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1751, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/tensorflow/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1762, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/tensorflow/lib/python3.12/site-packages/torch/nn/modules/conv.py", line 725, in forward
+    return self._conv_forward(input, self.weight, self.bias)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/tensorflow/lib/python3.12/site-packages/torch/nn/modules/conv.py", line 720, in _conv_forward
+    return F.conv3d(
+           ^^^^^^^^^
+RuntimeError: Given groups=1, weight of size [1536, 48, 1, 2, 2], expected input[1, 16, 22, 128, 72] to have 48 channels, but got 16 channels instead
+
+Prompt executed in 87.50 seconds
+got prompt
+!!! Exception during processing !!! Allocation on device 
+Traceback (most recent call last):
+  File "/home/ubuntu/ComfyUI/execution.py", line 349, in execute
+    output_data, output_ui, has_subgraph = get_output_data(obj, input_data_all, execution_block_cb=execution_block_cb, pre_execute_cb=pre_execute_cb)
+                                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/ComfyUI/execution.py", line 224, in get_output_data
+    return_values = _map_node_over_list(obj, input_data_all, obj.FUNCTION, allow_interrupt=True, execution_block_cb=execution_block_cb, pre_execute_cb=pre_execute_cb)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/ComfyUI/execution.py", line 196, in _map_node_over_list
+    process_inputs(input_dict, i)
+  File "/home/ubuntu/ComfyUI/execution.py", line 185, in process_inputs
+    results.append(getattr(obj, func)(**inputs))
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/ComfyUI/custom_nodes/ComfyUI-WanVideoWrapper/nodes.py", line 536, in loadmodel
+    sd = load_torch_file(model_path, device=transformer_load_device, safe_load=True)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/ComfyUI/comfy/utils.py", line 71, in load_torch_file
+    raise e
+  File "/home/ubuntu/ComfyUI/comfy/utils.py", line 61, in load_torch_file
+    sd[k] = f.get_tensor(k)
+            ^^^^^^^^^^^^^^^
+torch.OutOfMemoryError: Allocation on device 
+
+Got an OOM, unloading all loaded models.
+Prompt executed in 35.63 seconds
+got prompt
+!!! Exception during processing !!! Allocation on device 
+Traceback (most recent call last):
+  File "/home/ubuntu/ComfyUI/execution.py", line 349, in execute
+    output_data, output_ui, has_subgraph = get_output_data(obj, input_data_all, execution_block_cb=execution_block_cb, pre_execute_cb=pre_execute_cb)
+                                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/ComfyUI/execution.py", line 224, in get_output_data
+    return_values = _map_node_over_list(obj, input_data_all, obj.FUNCTION, allow_interrupt=True, execution_block_cb=execution_block_cb, pre_execute_cb=pre_execute_cb)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/ComfyUI/execution.py", line 196, in _map_node_over_list
+    process_inputs(input_dict, i)
+  File "/home/ubuntu/ComfyUI/execution.py", line 185, in process_inputs
+    results.append(getattr(obj, func)(**inputs))
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/ComfyUI/custom_nodes/ComfyUI-WanVideoWrapper/nodes.py", line 536, in loadmodel
+    sd = load_torch_file(model_path, device=transformer_load_device, safe_load=True)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/ComfyUI/comfy/utils.py", line 71, in load_torch_file
+    raise e
+  File "/home/ubuntu/ComfyUI/comfy/utils.py", line 61, in load_torch_file
+    sd[k] = f.get_tensor(k)
+            ^^^^^^^^^^^^^^^
+torch.OutOfMemoryError: Allocation on device 
+
+Got an OOM, unloading all loaded models.
+Prompt executed in 35.05 seconds
+got prompt
+!!! Exception during processing !!! unable to mmap 32791377504 bytes from file </home/ubuntu/pre_models/models/unet/wan2.1_i2v_720p_14B_fp16.safetensors>: Cannot allocate memory (12)
+Traceback (most recent call last):
+  File "/home/ubuntu/ComfyUI/execution.py", line 349, in execute
+    output_data, output_ui, has_subgraph = get_output_data(obj, input_data_all, execution_block_cb=execution_block_cb, pre_execute_cb=pre_execute_cb)
+                                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/ComfyUI/execution.py", line 224, in get_output_data
+    return_values = _map_node_over_list(obj, input_data_all, obj.FUNCTION, allow_interrupt=True, execution_block_cb=execution_block_cb, pre_execute_cb=pre_execute_cb)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/ComfyUI/execution.py", line 196, in _map_node_over_list
+    process_inputs(input_dict, i)
+  File "/home/ubuntu/ComfyUI/execution.py", line 185, in process_inputs
+    results.append(getattr(obj, func)(**inputs))
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/ComfyUI/custom_nodes/ComfyUI-WanVideoWrapper/nodes.py", line 536, in loadmodel
+    sd = load_torch_file(model_path, device=transformer_load_device, safe_load=True)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/ComfyUI/comfy/utils.py", line 71, in load_torch_file
+    raise e
+  File "/home/ubuntu/ComfyUI/comfy/utils.py", line 58, in load_torch_file
+    with safetensors.safe_open(ckpt, framework="pt", device=device.type) as f:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: unable to mmap 32791377504 bytes from file </home/ubuntu/pre_models/models/unet/wan2.1_i2v_720p_14B_fp16.safetensors>: Cannot allocate memory (12)
+
+Prompt executed in 0.07 seconds
+got prompt
+!!! Exception during processing !!! Allocation on device 
+Traceback (most recent call last):
+  File "/home/ubuntu/ComfyUI/execution.py", line 349, in execute
+    output_data, output_ui, has_subgraph = get_output_data(obj, input_data_all, execution_block_cb=execution_block_cb, pre_execute_cb=pre_execute_cb)
+                                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/ComfyUI/execution.py", line 224, in get_output_data
+    return_values = _map_node_over_list(obj, input_data_all, obj.FUNCTION, allow_interrupt=True, execution_block_cb=execution_block_cb, pre_execute_cb=pre_execute_cb)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/ComfyUI/execution.py", line 196, in _map_node_over_list
+    process_inputs(input_dict, i)
+  File "/home/ubuntu/ComfyUI/execution.py", line 185, in process_inputs
+    results.append(getattr(obj, func)(**inputs))
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/ComfyUI/custom_nodes/ComfyUI-WanVideoWrapper/nodes.py", line 536, in loadmodel
+    sd = load_torch_file(model_path, device=transformer_load_device, safe_load=True)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/ComfyUI/comfy/utils.py", line 71, in load_torch_file
+    raise e
+  File "/home/ubuntu/ComfyUI/comfy/utils.py", line 61, in load_torch_file
+    sd[k] = f.get_tensor(k)
+            ^^^^^^^^^^^^^^^
+torch.OutOfMemoryError: Allocation on device 
+
+Got an OOM, unloading all loaded models.
+Prompt executed in 35.28 seconds
