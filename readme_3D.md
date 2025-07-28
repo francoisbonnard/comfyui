@@ -10,7 +10,7 @@
 
 [stability ai stable-point-aware-3d](https://huggingface.co/stabilityai/stable-point-aware-3d)
 
-## Test
+## Test 1
 
 [Run Hunyuan3D in the Cloud - No Installation Required](https://www.thinkdiffusion.com/hunyuan3D)
 
@@ -46,6 +46,30 @@ Hy3DModelLoader:
 
 [hunyuan3d-dit-v2-0-fp16.safetensors](https://huggingface.co/Kijai/Hunyuan3D-2_safetensors/blob/main/hunyuan3d-dit-v2-0-fp16.safetensors)
 
+https://github.com/kijai/ComfyUI-Hunyuan3DWrapper
+
 Copy in diffusion_models
 
 [Flow control topic](https://www.reddit.com/r/comfyui/comments/1icdbvx/comment/m9soga7/?utm_source=share&utm_medium=web3x&utm_name=web3xcss&utm_term=1&utm_content=share_button)
+
+## test Hunyuan with Tencent
+
+[https://3d.hunyuan.tencent.com/](https://3d.hunyuan.tencent.com/)
+
+## test Sparc 3D
+
+[link](https://sparc3d.art/#demo)
+
+## test character creator from Reallusion
+
+[character creator](https://www.reallusion.com/character-creator/download.html)
+
+## test import mesh inside UE
+
+[Mesh to Metahuman in Unreal 5.6 with resizable custom clothing](https://www.youtube.com/watch?v=8_X7vKps554)
+
+## groom with maya
+
+[New Custom Metahuman Workflow | UE5.6 | Maya](https://www.youtube.com/watch?v=Tiqdynn_CLc)
+
+[Meta human for maya](https://dev.epicgames.com/documentation/en-us/metahuman/metahuman-for-maya)
