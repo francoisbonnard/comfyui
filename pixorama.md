@@ -117,7 +117,7 @@ https://comfy.icu/
 
 ### Florence 
 Install Florence
-![Select version](image-2.png)
+![Select version](./img/image-2.png)
 
 I use the latest
 
@@ -158,7 +158,7 @@ Link pixorama workflows : https://discord.com/channels/1245221993746399232/13235
 
 [Ollama search](https://ollama.com/search)
 
-![llava](image-5.png)
+![llava](./img/image-5.png)
 
 Install these custom nodes :
 
@@ -176,7 +176,7 @@ https://discord.com/channels/1245221993746399232/1323578980581904488
 
 How to change name inside of models inside controlnet ? 
 
-![2 controlnet model](image-6.png)
+![2 controlnet model](./img/image-6.png)
 
 ### Custom nodes
 
@@ -184,25 +184,25 @@ How to change name inside of models inside controlnet ?
 ComfyUI's ControlNet Auxiliary Preprocessors
 
 
-![personal Workspace files](image-7.png)
+![personal Workspace files](./img/image-7.png)
 
 conflict with : 
 
-![Comyui-art-venture in restart status](image-8.png)
+![Comyui-art-venture in restart status](./img/image-8.png)
 
 
 Uninstall ComfyUI's ControlNet Auxiliary Preprocessors
 
 ThinkDiff Team Advice
 
-![Advice from Clem](image-10.png)
+![Advice from Clem](./img/image-10.png)
 
 https://huggingface.co/Shakker-Labs/FLUX.1-dev-ControlNet-Union-Pro
 https://huggingface.co/Shakker-Labs/FLUX.1-dev-ControlNet-Union-Pro/resolve/main/diffusion_pytorch_model.safetensors
 
 ### Allocation on device
 
-![allocation](image-9.png)
+![allocation](./img/image-9.png)
 
 ### Not working with BAE
 
@@ -270,31 +270,31 @@ https://civitai.com/models/724291/vladimir-putin
 
 ### Custom Nodes
 
-![NO NEED OF ComfyUI-Manager](image-11.png)
+![NO NEED OF ComfyUI-Manager](./img/image-11.png)
 
 ## [Flux LoRA Training with Kohya in 2025](https://learn.thinkdiffusion.com/flux-lora-training-with-kohya/)
 
 ### Version Kohya v24.1.7 (sep 6,2024)
-![Relesea to use](image-12.png)
+![Relesea to use](./img/image-12.png)
 
 ### Uploading images
 
 /home/ubuntu/user_data/kohya/image/Trump
 
-![Jpb & txt files](image-13.png)
+![Jpb & txt files](./img/image-13.png)
 
 ### Blip Captioning
 
 (done for trump)
-![Blip ](image-34.png)
+![Blip ](./img/image-34.png)
 
 ### Dataset preparation
 
 Go to Lora / Training / Dataset preparation
 
-![Lora - Training](image-14.png)
+![Lora - Training](./img/image-14.png)
 
-![below](image-15.png)
+![below](./img/image-15.png)
 
 1. Dreambooth/LoRA Folder preparation enter :
    - the Instance prompt : trumpuni
@@ -302,50 +302,50 @@ Go to Lora / Training / Dataset preparation
 2. Set required paths
    - Training Images: /home/ubuntu/user_data/kohya/image/trump
    - Destination directory : /home/ubuntu/user_data/kohya/output/trump
-   - ![output folder](image-16.png)
+   - ![output folder](./img/image-16.png)
 3. Set the number of repeats : 20   
 4. Click on Prepare training data 
 5. Click on Copy info to respective fields.
-    - new folder in output/img ![new folder in output/img](image-17.png)
+    - new folder in output/img ![new folder in output/img](./img/image-17.png)
 6. Upload config file
-    - ![alt text](image-18.png)
+    - ![alt text](./img/image-18.png)
     - /home/ubuntu/user_data/kohya/configs/kohya48gbvram.json
 7. Configuration tab
-   - ![alt text](image-19.png)
-   - ![1 & 2](image-20.png)
+   - ![alt text](./img/image-19.png)
+   - ![1 & 2](./img/image-20.png)
 8. Start training
-   - ![alt text](image-21.png)
+   - ![alt text](./img/image-21.png)
 9. Check progress
     - /home/ubuntu/user_data/kohya/logs/francoisbonnard-clipskip-30090550-logs.txt
 10. Result
     -  .safetensors files
   
 11. TensorBoard
-    - Start tensorboard ![alt text](image-22.png)
-    - Open tensorboard ![alt text](image-23.png)
+    - Start tensorboard ![alt text](./img/image-22.png)
+    - Open tensorboard ![alt text](./img/image-23.png)
 
 #### Test 1
-    - 11h39 ![alt text](image-24.png)
-    - ![alt text](image-27.png)
-    - Steps max 14000 ![alt text](image-25.png)
-![alt text](image-26.png)
-![alt text](image-28.png)
+    - 11h39 ![alt text](./img/image-24.png)
+    - ![alt text](./img/image-27.png)
+    - Steps max 14000 ![alt text](./img/image-25.png)
+![alt text](./img/image-26.png)
+![alt text](./img/image-28.png)
 
 #### Test 2
     - New test with this parameter :
         "train_batch_size": 2,
         "epoch": 20,
         "save_every_n_epochs": 1,
-    - Steps max 4200 ![alt text](image-30.png)
+    - Steps max 4200 ![alt text](./img/image-30.png)
 
     - TensorBoard in blue 
-![alt text](image-29.png)
+![alt text](./img/image-29.png)
 
     14% - 567/4200 : 13:28
     16% -  651/4200 : 13:39
 
-![alt text](image-32.png)
-![alt text](image-31.png)
+![alt text](./img/image-32.png)
+![alt text](./img/image-31.png)
 
 420/4200 [52:35<7:53:17,  7.51s/it, avr_loss=0.375]2025-03-30 11:10:11 INFO     epoch is incremented. train_util.py:715 current_epoch: 2, epoch: 3  
 
@@ -355,7 +355,7 @@ Go to Lora / Training / Dataset preparation
 
  1050/4200 [2:11:20<6:34:00,  7.50s/it, avr_loss=0.357]2025-03-30 12:28:56 INFO     epoch is incremented.             train_util.py:715   current_epoch: 5, epoch: 6 
 
-![alt text](image-33.png)
+![alt text](./img/image-33.png)
 
 ### Glossary & concept for Kohya
 
@@ -584,7 +584,7 @@ end picture operation : 15h23
 #### start config 
 Prefix : Jordan bardella / Jordinou 
 
-![Jordinou prefix](image-35.png)
+![Jordinou prefix](./img/image-35.png)
 
 Dreambooth/LoRA Folder preparation enter :
 
