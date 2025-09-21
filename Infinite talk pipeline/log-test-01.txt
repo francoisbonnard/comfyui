@@ -1,0 +1,45 @@
+2025-09-21 12:30:57 - ERROR - ultimate_rvc.rvc.train.train - Not enough data in the training set. Perhaps you forgot to slice the audio files in preprocess?
+[rank0]:[W921 12:30:58.023096421 ProcessGroupNCCL.cpp:1538] Warning: WARNING: destroy_process_group() was not called before program exit, which can leak resources. For more info, please see https://pytorch.org/docs/stable/distributed.html#shutdown (function operator())
+2025-09-21 12:30:58 - WARNING - ultimate_rvc.rvc.train.train - Process running on device 0 exited with code 1.
+Traceback (most recent call last):
+  File "/content/HRVC/src/ultimate_rvc/web/common.py", line 70, in _wrapped_fn
+    res = fn(*args, **kwargs)
+          ^^^^^^^^^^^^^^^^^^^
+  File "/content/HRVC/src/ultimate_rvc/core/train/train.py", line 299, in run_training
+    train_main(
+  File "/content/HRVC/src/ultimate_rvc/rvc/train/train.py", line 269, in main
+    start()
+  File "/content/HRVC/src/ultimate_rvc/rvc/train/train.py", line 254, in start
+    raise RuntimeError(err_msg)
+RuntimeError: One or more training processes failed. See the logs or console for details.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/content/HRVC/.venv/lib/python3.12/site-packages/gradio/queueing.py", line 625, in process_events
+    response = await route_utils.call_process_api(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/content/HRVC/.venv/lib/python3.12/site-packages/gradio/route_utils.py", line 322, in call_process_api
+    output = await app.get_blocks().process_api(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/content/HRVC/.venv/lib/python3.12/site-packages/gradio/blocks.py", line 2136, in process_api
+    result = await self.call_function(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/content/HRVC/.venv/lib/python3.12/site-packages/gradio/blocks.py", line 1662, in call_function
+    prediction = await anyio.to_thread.run_sync(  # type: ignore
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/content/HRVC/.venv/lib/python3.12/site-packages/anyio/to_thread.py", line 56, in run_sync
+    return await get_async_backend().run_sync_in_worker_thread(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/content/HRVC/.venv/lib/python3.12/site-packages/anyio/_backends/_asyncio.py", line 2476, in run_sync_in_worker_thread
+    return await future
+           ^^^^^^^^^^^^
+  File "/content/HRVC/.venv/lib/python3.12/site-packages/anyio/_backends/_asyncio.py", line 967, in run
+    result = context.run(func, *args)
+             ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/content/HRVC/.venv/lib/python3.12/site-packages/gradio/utils.py", line 883, in wrapper
+    response = f(*args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^
+  File "/content/HRVC/src/ultimate_rvc/web/common.py", line 77, in _wrapped_fn
+    raise gr.Error(str(e)) from e
+gradio.exceptions.Error: 'One or more training processes failed. See the logs or console for details.'

@@ -10,4 +10,5 @@ Can't use "download link" submit from HF
 
 [Link in the tuto ]( https://huggingface.co/black-forest-labs/FLUX.1-Kontext-dev/resolve/main/flux1-kontext-dev.safetensors?download=true)
 
-[ae.safetensors](https://huggingface.co/black-forest-labs/FLUX.1-Kontext-dev/resolve/main/flux1-kontext-dev.safetensors)
+[ae.safetensors](https://huggingface.co/black-forest-labs/FLUX.1-Kontext-dev/resolve/main/flux1-kontext-dev.safetensors)'
+
