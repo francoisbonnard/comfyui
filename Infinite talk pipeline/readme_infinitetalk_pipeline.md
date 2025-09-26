@@ -42,38 +42,17 @@ Avec 20–60 min de données : ~200–400 epochs suffisent généralement (on ar
 
 Avec 3,7 min (ton cas) : tu peux pousser à 600–1 200 epochs pour “faire sortir un timbre”, mais tu auras vite de l’overfit (robotisation/artefacts) et la qualité restera limitée. Mieux vaut augmenter le dataset que d’augmenter encore les epochs.
 
-### test 01 : A100
-Avant entrainement avec A1000 : Disponible : 272.82 unités de calcul
-Audio skiping method : Automatic (Skip m'a donné une erreur log-test-01.txt)
-Sample rate : 40000
-Number of epochs : 500
+### Feature Extraction
 
-- start 14h20
-- public URL : 14h23
-- train : 
-  - 14h36 - epoch 0 - 271.56 unités de calculs
-  - 14h56  - epoch 240 -  269.57 unités de calcul
-  
-![Affichage des ressources A100](./img/image-8.png)
+F0 Method : 
+- mvpe
+- crepe
+- crepe-tiny
 
-### test 02 : 
+Embedder model
+- contentvec
+- chinese
+- japanese
+- corean
+- custom
 
-Processeur L4 
-Source : 31 fichiers wav 44kz 16 bits / durée totale 1187 secondes = 20'
-epoch : 300
-
-epoch 1 : 17:16:24
-epoch 100 : 18:01:01
-
-
-# Exit Google Colab
-
-``` python
-    import time, os
-
-    # attendre 2 heures (7200 secondes)
-    time.sleep(3600)
-
-    # arrêter le runtime
-    os._exit(0)
-```
