@@ -1,4 +1,7 @@
 *.wav
 *.pkf
 *.mp4
+*.index
+*.pth
+
 
