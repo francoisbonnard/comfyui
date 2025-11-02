@@ -10,6 +10,8 @@ https://www.youtube.com/watch?v=Dm27NwstXcY
 
 # Google Colab Training
 
+https://github.com/JackismyShephard/ultimate-rvc
+
 ## Rappel des processeurs
 
 Processeur (CPU) : calcul général. OK pour pré-traitement, petites tâches, pas pour l’entraînement GPU/TPU.
@@ -213,4 +215,11 @@ Détermine si tu pars d’un modèle déjà entraîné ou pas.
 * **Index algorithm** : FAISS
 * **Pretrained model type** : Default
 
-Veux-tu que je te propose une **configuration optimale** (valeurs concrètes) pour ton dataset de ~8 min, pour éviter la perte de temps avec trop d’epochs ?
+## Output
+
+.pth = poids du modèle (obligatoire).
+
+.index = index de features (optionnel mais recommandé : meilleure stabilité/timbre quand tu règles un “index rate” > 0).
+
+![pitch extraction](image.png)
+
